@@ -4,14 +4,14 @@
 
 [![Oh My Fish](https://img.shields.io/badge/Framework-Oh_My_Fish-blue.svg?style=flat)](https://github.com/oh-my-fish/oh-my-fish) [![MIT License](https://img.shields.io/github/license/oh-my-fish/theme-bobthefish.svg?style=flat)](/LICENSE.md)
 
-![bobthefish][screencast]
-
-
 ## Trollwut's changes
 
 I just forked this theme to change it to my appeal. Changes so far:
 
 - remove this unnecessary fish_greeting
+
+
+![bobthefish][screencast]
 
 
 ### Installation
