@@ -7,6 +7,13 @@
 ![bobthefish][screencast]
 
 
+## Trollwut's changes
+
+I just forked this theme to change it to my appeal. Changes so far:
+
+- remove this unnecessary fish_greeting
+
+
 ### Installation
 
 Be sure to have Oh My Fish installed. Then just:
