@@ -452,9 +452,9 @@ function __bobthefish_colors -S -a color_scheme -d 'Define colors used by bobthe
       set -l red          ff5555
       set -l yellow       f1fa8c
 
-      set -x color_initial_segment_exit  $fg $red  --bold
+      set -x color_initial_segment_exit  $red $fg  --bold
       set -x color_initial_segment_su    $fg $purple --bold
-      set -x color_initial_segment_jobs  $fg $comment --bold
+      set -x color_initial_segment_jobs  $red $selection --bold
 
       set -x color_path                  $selection $fg
       set -x color_path_basename         $selection $fg --bold

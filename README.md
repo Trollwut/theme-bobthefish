@@ -6,7 +6,7 @@
 
 ## Trollwut's changes
 
-I just forked this theme to change it to my appeal. Changes so far:
+I just forked this theme to change it to my appeal. Heavy appeal for the Dracula color scheme. Changes so far:
 
 - remove this unnecessary fish_greeting
 
