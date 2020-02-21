@@ -58,9 +58,9 @@ function __bobthefish_glyphs -S -d 'Define glyphs used by bobthefish'
 
   # Use prettier Nerd Fonts glyphs
   if [ "$theme_nerd_fonts" = "yes" ]
-    set branch_glyph     \uF418
-    set detached_glyph   \uF417
-    set tag_glyph        \uF412
+    set branch_glyph     \uE725
+    set detached_glyph   \uE729
+    set tag_glyph        \uF02B
 
     set virtualenv_glyph \uE73C ' '
     set ruby_glyph       \uE791 ' '
