@@ -44,11 +44,11 @@ This theme is based loosely on [agnoster][agnoster].
 
 ### The Prompt
 
- * Flags:
+ * Status flags:
      * Previous command failed (**`!`**)
-     * Background jobs (**`%`**)
+     * Private mode (**🔒** or **`⦸`**)
      * You currently have superpowers (**`$`**)
-     * Cursor on newline
+     * Background jobs (**`%`**)
  * Current vi mode
  * `User@Host` (unless you're the default user)
  * Current RVM, rbenv or chruby (Ruby) version
@@ -81,7 +81,8 @@ set -g theme_display_git_untracked no
 set -g theme_display_git_ahead_verbose yes
 set -g theme_display_git_dirty_verbose yes
 set -g theme_display_git_stashed_verbose yes
-set -g theme_display_git_master_branch yes
+set -g theme_display_git_default_branch yes
+set -g theme_git_default_branches master main
 set -g theme_git_worktree_support yes
 set -g theme_use_abbreviated_branch_name yes
 set -g theme_display_vagrant yes
@@ -89,6 +90,7 @@ set -g theme_display_docker_machine no
 set -g theme_display_k8s_context yes
 set -g theme_display_hg yes
 set -g theme_display_virtualenv no
+set -g theme_display_nix no
 set -g theme_display_ruby no
 set -g theme_display_nvm yes
 set -g theme_display_user ssh
@@ -101,6 +103,7 @@ set -g theme_title_display_path no
 set -g theme_title_display_user yes
 set -g theme_title_use_abbreviated_path no
 set -g theme_date_format "+%a %H:%M"
+set -g theme_date_timezone America/Los_Angeles
 set -g theme_avoid_ambiguous_glyphs yes
 set -g theme_powerline_fonts no
 set -g theme_nerd_fonts yes
@@ -113,6 +116,10 @@ set -g theme_project_dir_length 1
 set -g theme_newline_cursor yes
 set -g theme_newline_prompt '$ '
 ```
+**Git options**
+
+- `theme_display_git_default_branch`. By default theme will hide/collapse the branch name in your prompt when you are using a Git _default branch_ i.e. historically `master` and often `main` now. Set to `yes` to stop these branches from being hidden/collapsed.
+- `theme_git_default_branches`. The big cloud repos (GitHub, Bitbucket, GitLab et al.) are moving away from using `master` as the default branch name, and allow you to choose your own. As of version **2.28**, Git also supports custom default branch names via the `init.defaultBranch` config option. If our defaults of `master main` don't suit you, you can add/remove names in thist list i.e. `main trunk`. This ensures correct hiding/collapsing behaviour with custom default branch names (unless option above is activated).
 
 **Title options**
 
@@ -128,6 +135,8 @@ set -g theme_newline_prompt '$ '
 - `theme_display_vagrant`. This feature is disabled by default, use `yes` to display Vagrant status in your prompt. Please note that only the VirtualBox and VMWare providers are supported.
 - `theme_display_vi`. By default the vi mode indicator will be shown if vi or hybrid key bindings are enabled. Use `no` to hide the indicator, or `yes` to show the indicator.
 - `theme_display_k8s_context`. This feature is disabled by default. Use `yes` to show the current kubernetes context (`> kubectl config current-context`).
+- `theme_display_k8s_namespace`. This feature is disabled by default. Use `yes` to show the current kubernetes namespace.
+- `theme_display_aws_vault_profile`. This feature is disabled by default. Use `yes` to show the currently executing [AWS Vault](https://github.com/99designs/aws-vault) profile.
 - `theme_display_user`. If set to `yes`, display username always, if set to `ssh`, only when an SSH-Session is detected, if set to no, never.
 - `theme_display_hostname`. Same behaviour as `theme_display_user`.
 - `theme_display_sudo_user`. If set to `yes`, displays the sudo-username in a root shell. For example, when calling `sudo -s` and having this option set to `yes`, the username of the user, who called `sudo -s`, will be displayed.
